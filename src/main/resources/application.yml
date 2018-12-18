@@ -1,0 +1,16 @@
+server:
+  port: 8010
+spring:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+  primary:
+    url: jdbc:oracle:thin:@192.168.22.164:1521/gadtest
+    username: ggyw
+    password: ggyw01
+    driver-class-name: oracle.jdbc.driver.OracleDriver
+  second:
+    url: jdbc:oracle:thin:@10.102.2.49:15227/ora8
+    username: ggyw
+    password: ksUS4fcd
+    driver-class-name: oracle.jdbc.driver.OracleDriver
+
