@@ -67,6 +67,7 @@ public class DataSourceConfig {
         dataSourceMap.put("second",second);
         DynamicRoutingDataSource dynamicRoutingDataSource=new DynamicRoutingDataSource();
         dynamicRoutingDataSource.setTargetDataSources(dataSourceMap);
+        dynamicRoutingDataSource.setDefaultTargetDataSource(primary);
         return dynamicRoutingDataSource;
     }
 

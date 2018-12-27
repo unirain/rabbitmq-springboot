@@ -1,7 +1,5 @@
 package com.example.demo.mq;
 
-import org.springframework.amqp.rabbit.annotation.RabbitHandler;
-import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.stereotype.Component;
 
 /********************************************************************************
@@ -16,13 +14,13 @@ import org.springframework.stereotype.Component;
  *******************************************************************************/
 
 @Component
-@RabbitListener(queues = "clm")
+//@RabbitListener(queues = "clm")
 public class MqAcept {
     //参数名称会自动解析内容
-    @RabbitHandler
-    public void process(String hello) {
-
+//    @RabbitHandler
+    public void process(String hello){
         System.out.println("Receiver : " + hello);
+        throw new RuntimeException("测测");
     }
 
 }
